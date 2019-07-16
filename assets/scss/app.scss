@@ -1,0 +1,200 @@
+@import "~bootstrap/scss/bootstrap";
+body{
+  background: no-repeat fixed 100% url("/images/body/background.jpg");
+  background-size: cover;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.PC{
+  font-size: 1.1em;
+  position: relative;
+  padding: 1rem 0 0.5rem;
+  margin: 0 1.5rem;
+  color: gold !important;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.8);
+    transition: transform 250ms;
+
+  }
+
+  &:hover {
+    color: whitesmoke !important;
+    &::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+  }
+
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.2); }
+.portable{
+  font-size: 2.0em;
+  justify-content: center;
+}
+.navbar-toggler{
+  justify-content: space-around;
+}
+.logocenter{
+  position: absolute;
+  left: 28.7%;
+  display: block;
+  top: 5px;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.wrap {
+  margin: 50px;
+}
+$burger-size: 40px;
+$burger-burger: gold;
+$burger-cross: #e74c3c;
+$burger-thickness: 6px;
+$burger-anim-time: .5s;
+$burger-anim-effect: ease-out;
+$burger-padding: ($burger-size - $burger-thickness)/2;
+
+.burger-button {
+  user-select: none;
+  display: block;
+  width: $burger-size;
+  height: $burger-size;
+  background-color: $burger-burger;
+  background-clip: content-box;
+  padding: $burger-padding 0;
+  position: relative;
+  transform-origin: center;
+  will-change: transform;
+
+  &:after,
+  &:before {
+    display: block;
+    content: "";
+    width: $burger-size;
+    height: $burger-thickness;
+    background-color: inherit;
+    position: absolute;
+    will-change: transform;}
+
+  &:after {
+    transform: translate3d(0,$burger-padding,0); }
+
+  &:before {
+    transform: translate3d(0,-1*$burger-padding,0); }
+}
+
+
+
+.goto-burger {
+  animation: gotoBurger-all $burger-anim-time $burger-anim-effect forwards;
+
+  &:before {
+    animation: gotoBurger-before $burger-anim-time $burger-anim-effect forwards;
+  }
+  &:after {
+    animation: gotoBurger-after $burger-anim-time $burger-anim-effect forwards;
+  }
+}
+@keyframes gotoBurger-all  {
+  0% {
+    transform: translate3d(0,0,0) rotate(315deg);
+    background-color: $burger-cross;
+  }
+  100% {
+    transform: translate3d(0,0,0) rotate(720deg);
+    background-color: $burger-burger;
+  }
+}
+@keyframes gotoBurger-before  {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  60% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,-1*$burger-padding,0);
+  }
+}
+@keyframes gotoBurger-after  {
+  0% {
+    transform: translate3d(0,0,0) rotate(90deg);
+  }
+  60% {
+    transform: translate3d(0,0,0) rotate(180deg);
+  }
+  100% {
+    transform: translate3d(0,$burger-padding,0) rotate(180deg);
+  }
+}
+
+
+.goto-cross {
+  animation: gotoCross-all $burger-anim-time $burger-anim-effect forwards;
+  &:before {
+    animation: gotoCross-before $burger-anim-time $burger-anim-effect forwards;
+  }
+  &:after {
+    animation: gotoCross-after $burger-anim-time $burger-anim-effect forwards;
+  }
+}
+@keyframes gotoCross-before  {
+  0% {
+    transform: translate3d(0,-1*$burger-padding,0);
+  }
+  30% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes gotoCross-after  {
+  0% {
+    transform: translate3d(0,$burger-padding,0);
+  }
+  30% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,0,0) rotate(90deg);
+  }
+}
+@keyframes gotoCross-all  {
+  0% {
+    transform: translate3d(0,0,0) rotate(0deg);
+    background-color: $burger-burger;
+  }
+  100% {
+    transform: translate3d(0,0,0) rotate(315deg);
+    background-color: $burger-cross;
+  }
+}
+
+@keyframes gotoCross-all-btn  {
+  0% {
+    transform: translate3d(0,0,0) rotate(0deg);
+    background-color: $burger-burger;
+  }
+  100% {
+    transform: translate3d(0,0,0) rotate(315deg);
+    background-color: $burger-cross;
+    opacity: 0;
+  }
+}
