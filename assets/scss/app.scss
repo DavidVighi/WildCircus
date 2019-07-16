@@ -1,4 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "Carnevalee Freakshow";
+  src: url("../fonts/carnavalfont/Carnevalee Freakshow.ttf");
+}
 body{
   background: no-repeat fixed 100% url("/images/body/background.jpg");
   background-size: cover;
@@ -197,4 +201,73 @@ $burger-padding: ($burger-size - $burger-thickness)/2;
     background-color: $burger-cross;
     opacity: 0;
   }
+}
+.globalContainer{
+  background: rgba(255,255,255, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  .multiBlock{
+    opacity: 1 !important;
+    background-color: rgba(255, 232, 179, 1);
+    border-radius: 6px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+.img-custom:hover{
+  color: rgba(0, 0, 0, 0.29);
+}
+.dtl13 {
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.dtl13 img {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.dtl13 .dtl {
+  background: #333;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 0 15px;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.dtl13 .dtl h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.dtl13 .dtl p {
+  font-size: 17px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  color: #9d9c9c;
+  text-indent: 10px;
+}
+.dtl13:hover .dtl {
+  visibility: visible;
+  opacity: 0.89;
+  left: 25px;
+  top: 25px;
+}
+.jumbotron{
+  font-family: "Carnevalee Freakshow";
+  font-size: 1.9em;
+  font-weight: bold;
+  opacity: 0.6;
 }

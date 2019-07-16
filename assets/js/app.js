@@ -8,7 +8,7 @@
 // any CSS you require will output into a single css file (app.css in this case)
 require('../scss/app.scss');
 require('../js/burgerButton');
-var $ = require('jquery');
+let $ = require('jquery');
 require('bootstrap');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
