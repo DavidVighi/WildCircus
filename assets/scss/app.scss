@@ -223,6 +223,7 @@ $burger-padding: ($burger-size - $burger-thickness)/2;
     background-color: rgba(255, 232, 179, 1);
     border-radius: 6px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+
   }
 }
 .img-custom:hover{
@@ -258,16 +259,16 @@ $burger-padding: ($burger-size - $burger-thickness)/2;
 }
 .dtl13 .dtl h3 {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-decoration: underline;
 }
 .dtl13 .dtl p {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 10px;
-  line-height: 1.2;
+  line-height: 1.1;
   color: #9d9c9c;
   text-indent: 10px;
 }

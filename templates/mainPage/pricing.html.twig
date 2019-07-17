@@ -16,20 +16,15 @@
     </tr>
     </thead>
     <tbody>
+    {% for price in prices %}
     <tr>
-        <th scope="row">Weekdays except Wednesday</th>
-        <td>$30</td>
-        <td>$15</td>
-        <td>$20 per person</td>
-        <td>$8 per schoolchild</td>
+        <th scope="row">{{ price.days }}</th>
+        <td>${{ price.adultprices }}</td>
+        <td>${{ price.kidsprice }}</td>
+        <td>${{ price.groups }} per person</td>
+        <td>${{ price.school }} per schoolchild</td>
     </tr>
-    <tr>
-        <th scope="row">Weekend and Wednesday</th>
-        <td>$37</td>
-        <td>$21</td>
-        <td>$26 per person</td>
-        <td>$11 per schoolchild</td>
-    </tr>
+    {% endfor %}
     </tbody>
 </table>
         </div>
