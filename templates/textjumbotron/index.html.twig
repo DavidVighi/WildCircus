@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Textjumbotron index{% endblock %}
+
+{% block body %}
+    <h1>Textjumbotron index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texte</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for textjumbotron in textjumbotrons %}
+            <tr>
+                <td>{{ textjumbotron.id }}</td>
+                <td>{{ textjumbotron.texte }}</td>
+                <td>
+                    <a href="{{ path('textjumbotron_show', {'id': textjumbotron.id}) }}">show</a>
+                    <a href="{{ path('textjumbotron_edit', {'id': textjumbotron.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('textjumbotron_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Performancesimage index{% endblock %}
+
+{% block body %}
+    <h1>Performancesimage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Textimages</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for performancesimage in performancesimages %}
+            <tr>
+                <td>{{ performancesimage.id }}</td>
+                <td>{{ performancesimage.image }}</td>
+                <td>{{ performancesimage.textimages }}</td>
+                <td>
+                    <a href="{{ path('performancesimage_show', {'id': performancesimage.id}) }}">show</a>
+                    <a href="{{ path('performancesimage_edit', {'id': performancesimage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('performancesimage_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Textjumbotron{% endblock %}
+
+{% block body %}
+    <h1>Textjumbotron</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ textjumbotron.id }}</td>
+            </tr>
+            <tr>
+                <th>Texte</th>
+                <td>{{ textjumbotron.texte }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('textjumbotron_index') }}">back to list</a>
+
+    <a href="{{ path('textjumbotron_edit', {'id': textjumbotron.id}) }}">edit</a>
+
+    {{ include('textjumbotron/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Performancesimage{% endblock %}
+
+{% block body %}
+    <h1>Edit Performancesimage</h1>
+
+    {{ include('performancesimage/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('performancesimage_index') }}">back to list</a>
+
+    {{ include('performancesimage/_delete_form.html.twig') }}
+{% endblock %}

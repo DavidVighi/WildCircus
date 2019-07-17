@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Textjumbotron{% endblock %}
+
+{% block body %}
+    <h1>Edit Textjumbotron</h1>
+
+    {{ include('textjumbotron/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('textjumbotron_index') }}">back to list</a>
+
+    {{ include('textjumbotron/_delete_form.html.twig') }}
+{% endblock %}
