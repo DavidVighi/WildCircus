@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<table class="table table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">Adults</th>
+        <th scope="col">Children under 12 years old</th>
+        <th scope="col">Groups of more than 10 people</th>
+        <th scope="col">Schools</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Weekdays except Wednesday</th>
+        <td>$30</td>
+        <td>$15</td>
+        <td>$20 per person</td>
+        <td>$8 per schoolchild</td>
+    </tr>
+    <tr>
+        <th scope="row">Weekend and Wednesday</th>
+        <td>$37</td>
+        <td>$21</td>
+        <td>$26 per person</td>
+        <td>$11 per schoolchild</td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}

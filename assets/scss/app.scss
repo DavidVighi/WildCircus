@@ -1,4 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
+$primary-color: #f76c6c;
+$secondary-color: #f99797;
+$warm-color: #ffd64f;
+$a-color: #ffffff;
+$a-hover:#ffffff;
+$a-secondary: #B8C3C3;
+$background-footer: #4B5863;
+$background-body: #FFF;
+$btn-concept: #97726F;
+$btn-login: #5F899A;
+$btn-register: #4B5863;
+
 @font-face {
   font-family: "Carnevalee Freakshow";
   src: url("../fonts/carnavalfont/Carnevalee Freakshow.ttf");
@@ -270,4 +282,64 @@ $burger-padding: ($burger-size - $burger-thickness)/2;
   font-size: 1.9em;
   font-weight: bold;
   opacity: 0.6;
+}
+.textPortable{
+  font-size: 2em;
+  padding-top: 10px;
+}
+.table{
+  background-color: whitesmoke;
+}
+#myFooter {
+  background-color: #3a3f46;
+  color: white;
+  margin-top: 300px;
+}
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+  margin-top: 30px;
+  font-weight: bold;
+}
+#myFooter a {
+  color: #d2d1d1;
+  text-decoration: none;
+}
+#myFooter a:hover,
+#myFooter a:focus {
+  text-decoration: none;
+  color: white;
+}
+#myFooter .second-bar a:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+
+  #myFooter .info{
+    text-align: center;
+  }
+}
+
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html{
+  height: 100%;
+}
+
+body {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+.logofooter{
+  margin-top: 30px;
 }
